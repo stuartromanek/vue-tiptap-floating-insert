@@ -1,0 +1,58 @@
+{
+  "name": "vue-tiptap",
+  "version": "2.2.9",
+  "author": "neverbot <ivan@neverbot.com> (http://neverbot.com)",
+  "license": "MIT",
+  "description": "Vue component to use TipTap Editor without being renderless",
+  "scripts": {
+    "serve": "vue-cli-service serve example/main.js",
+    "build": "vue-cli-service build example/main.js",
+    "lint": "npx eslint . --ext js,json,vue",
+    "lint:fix": "npx eslint . --ext js,json,vue --fix",
+    "test": "echo \"Error: no tests\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neverbot/vue-tiptap"
+  },
+  "keywords": [
+    "vue",
+    "tiptap",
+    "vuejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/neverbot/vue-tiptap/issues"
+  },
+  "dependencies": {
+    "@tiptap/extension-floating-menu": "^2.0.0-beta.218",
+    "@tiptap/extension-underline": "^2.0.0-beta.209",
+    "@tiptap/starter-kit": "^2.0.0-beta.209",
+    "@tiptap/vue-3": "^2.0.0-beta.209",
+    "core-js": "^3.27.1",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/preset-env": "^7.20.2",
+    "@vue/babel-preset-app": "^5.0.8",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/compiler-sfc": "^3.2.45",
+    "babel-loader": "^9.1.2",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.8.0",
+    "prettier": "^2.8.2",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "vue-eslint-parser": "^9.1.0",
+    "webpack": "^5.75.0"
+  },
+  "engines": {
+    "node": "^14.17.0 || ^16.13.0 || ^v18.9.0",
+    "npm": "^7.14.0 || ^8.1.2"
+  }
+}

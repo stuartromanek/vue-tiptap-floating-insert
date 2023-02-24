@@ -22,11 +22,16 @@
 <script>
 import StarterKit from '@tiptap/starter-kit';
 import { Editor, EditorContent, FloatingMenu } from '@tiptap/vue-3';
-FloatingMenu.props.shouldShow.default = ({ editor, view, state, oldState }) => {
+
+// This is not how providing the showShould function is demonstrated in the docs
+// but works for this demo
+// see https://tiptap.dev/api/extensions/floating-menu
+FloatingMenu.props.shouldShow.default = ({ state }) => {
   const { $to } = state.selection;
   if (state.selection.empty && $to.nodeBefore && $to.nodeBefore.text) {
     const text = $to.nodeBefore.text;
-    if (text.charAt(text.length - 1) === '+') {
+    // Only show when the user has just entered a '/' character
+    if (text.charAt(text.length - 1) === '/') {
       return true;
     }
   }
@@ -42,7 +47,7 @@ export default {
     return {
       editor: null,
       isEditable: true,
-    }
+    };
   },
 
   watch: {
@@ -53,23 +58,20 @@ export default {
 
   mounted() {
     this.editor = new Editor({
-      extensions: [
-        StarterKit,
-        FloatingMenu
-      ],
+      extensions: [StarterKit, FloatingMenu],
       content: `
         <p>
           This is an example of a Medium-like editor. Enter a new line and some buttons will appear.
         </p>
         <p></p>
       `,
-    })
+    });
   },
 
   beforeUnmount() {
-    this.editor.destroy()
+    this.editor.destroy();
   },
-}
+};
 </script>
 
 <style lang="scss">

@@ -71,11 +71,12 @@ export default {
 
 <style lang="css">
 #app {
-  display: flex;
+  margin: 0 auto;
+  width: 800px;
   padding-top: 100px;
   box-sizing: border-box;
-  flex-flow: column;
-  align-items: center;
+  /* flex-flow: column; */
+  /* align-items: center; */
   font-family: -apple-system, 'Noto Sans', 'Helvetica Neue', Helvetica,
     'Nimbus Sans L', Arial, 'Liberation Sans', 'PingFang SC',
     'Hiragino Sans GB', 'Noto Sans CJK SC', 'Source Han Sans SC',

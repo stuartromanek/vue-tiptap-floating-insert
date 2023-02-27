@@ -25,13 +25,7 @@ import { Editor, EditorContent, FloatingMenu } from '@tiptap/vue-3';
 import Placeholder from '@tiptap/extension-placeholder';
 
 // Subclass the Placeholder extension for our / instructions
-const CustomPlaceholder = Placeholder.extend({
-  emptyNodeClass: 'slash-instructions',
-  placeholder: () => {
-    return 'Type / to insert new elements';
-  }
-});
-
+const CustomPlaceholder = Placeholder.extend();
 
 // This is not how providing the showShould function is demonstrated in the docs
 // but works for this demo
